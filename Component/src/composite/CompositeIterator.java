@@ -36,11 +36,11 @@ public class CompositeIterator implements Iterator<MenuComponent> {
 		}
 		Iterator<MenuComponent> iterator = this.stack.peek();
 		MenuComponent menuComponent = iterator.next();
-		if (menuComponent instanceof Menu) {
-			Iterator<MenuComponent> compositeIterator = menuComponent
-					.createIterator();
-			this.stack.push(compositeIterator);
-		}
+//		if (menuComponent instanceof Menu) {
+//			Iterator<MenuComponent> compositeIterator = menuComponent
+//					.createIterator();
+//			this.stack.push(compositeIterator);
+//		}
 		return menuComponent;
 	}
 

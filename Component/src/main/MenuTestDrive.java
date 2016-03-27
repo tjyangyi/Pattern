@@ -18,8 +18,8 @@ public class MenuTestDrive {
 
 		dinMenu.add(dessertMenu);
 		dessertMenu.add(new MenuItem("Apple Pie", "Description 2", true, 1.59));
-		dessertMenu
-				.add(new MenuItem("Banana Pie", "Description 6", true, 1.59));
+		/*dessertMenu
+				.add(new MenuItem("Banana Pie", "Description 6", true, 1.59));*/
 
 		// MenuComponent dessertMenuSon = new Menu("DESSERT MENU SON",
 		// "DESSERT MENU SON");

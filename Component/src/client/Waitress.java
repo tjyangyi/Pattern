@@ -20,7 +20,7 @@ public class Waitress {
 		while (iterator.hasNext()) {
 			MenuComponent menuComponent = iterator.next();
 			try {
-					menuComponent.print();
+				menuComponent.print();
 			} catch (UnsupportedOperationException e) {
 			}
 		}
