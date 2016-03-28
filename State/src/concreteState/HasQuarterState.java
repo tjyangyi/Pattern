@@ -1,9 +1,12 @@
 package concreteState;
 
+import java.util.Random;
+
 import context.GumballMachine;
 import state.State;
 
 public class HasQuarterState implements State {
+	private Random random = new Random();
 	private GumballMachine gumballMachine;
 
 	public HasQuarterState(GumballMachine gumballMachine) {
@@ -24,7 +27,12 @@ public class HasQuarterState implements State {
 	@Override
 	public void turnCrank() {
 		System.out.println("×ª¶¯ÁËÇú±ú");
-		this.gumballMachine.setState(this.gumballMachine.getSoldState());
+		if (this.random.nextInt(10) == 0
+				&& (this.gumballMachine.getGumballCount() > 1)) {
+			this.gumballMachine.setState(this.gumballMachine.getWinnerState());
+		} else {
+			this.gumballMachine.setState(this.gumballMachine.getSoldState());
+		}
 	}
 
 	@Override

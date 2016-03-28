@@ -1,14 +1,8 @@
 package concreteState;
 
-import context.GumballMachine;
 import state.State;
 
 public class SoldOutState implements State {
-	private GumballMachine gumballMachine;
-
-	public SoldOutState(GumballMachine gumballMachine) {
-		this.gumballMachine = gumballMachine;
-	}
 
 	@Override
 	public void insertQuarter() {
